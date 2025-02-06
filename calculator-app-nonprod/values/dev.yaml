@@ -1,3 +1,4 @@
+ENV: dev
 API_KEY: dev-api-key
 IMAGE_TAG: test
 VERSION: "2.1"
