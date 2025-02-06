@@ -1,4 +1,4 @@
 ENV: uat
 API_KEY: uat-api-key
-IMAGE_TAG: test
+IMAGE_TAG: uat-2cbdac5
 VERSION: "2.1"
