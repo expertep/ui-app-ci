@@ -15,8 +15,6 @@ spec:
       labels:
         app: ui-app
     spec:
-      imagePullSecrets:
-        - name: regcred
       containers:
         - name: ui-app
           image: habor.analytichpxv3.online/ui:test  # Replace with your image

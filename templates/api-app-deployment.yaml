@@ -15,8 +15,6 @@ spec:
       labels:
         app: api-app
     spec:
-      imagePullSecrets:
-        - name: regcred
       containers:
         - name: api-app
           image: habor.analytichpxv3.online/kubernetes-workshop/api:{{ .Values.IMAGE_TAG }}
