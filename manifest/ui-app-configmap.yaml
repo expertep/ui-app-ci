@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ui-app-config
+  namespace: test1
+  labels:
+    app: ui-app
+data:
+  nginx.conf: |
+    events {}
+    http {
+      server {
+        listen 80;
+        server_name localhost;
+        root /usr/share/nginx/html;
+        index index.html;
+        location / {
+          try_files $uri /index.html;
+        }
+      }
+    }

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ui-app-config
+  namespace: {{ .Release.Name }}
+  labels:
+    app: ui-app
+data:
+  VERSION: {{ .Values.VERSION | quote }}

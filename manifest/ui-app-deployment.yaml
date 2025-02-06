@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui-app
+  namespace: test1
+  labels:
+    app: ui-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ui-app
+  template:
+    metadata:
+      labels:
+        app: ui-app
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: ui-app
+          image: habor.analytichpxv3.online/ui:test  # Replace with your image
+          ports:
+            - containerPort: 5173
